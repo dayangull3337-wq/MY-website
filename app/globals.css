@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg: #fdfcfb;
+    --ink: #1a1a1a;
+    --accent: #c4a484;
+    --accent-dark: #8f6e4d;
+    --accent-light: rgba(196, 164, 132, 0.15);
+    --glass: rgba(255, 255, 255, 0.55);
+    --glass-border: rgba(255, 255, 255, 0.65);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.04);
+    --glass-dark-bg: rgba(26, 26, 26, 0.85);
+    --glass-dark-border: rgba(255, 255, 255, 0.12);
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Editorial Hero Gradient Background */
+.hero-gradient {
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(196, 164, 132, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 90% 80%, rgba(26, 26, 26, 0.04) 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(253, 252, 251, 0.8) 0%, transparent 70%);
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Editorial Glassmorphic utilities */
+.glass {
+  background: var(--glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04), 0 0 1px 1px rgba(255, 255, 255, 0.8) inset;
+}
+
+.glass-panel-subtle {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+}
+
+.glass-panel-dark {
+  background: rgba(26, 26, 26, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.3);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+}
+
+.glass-input {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.glass-input:focus {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(26, 26, 26, 0.3);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(196, 164, 132, 0.2);
+}
+
+/* Nav link uppercase tracking */
+.nav-link {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s, color 0.2s;
+}
+
+.nav-link:hover {
+  opacity: 0.7;
+}
+
+/* Editorial badge styling */
+.editorial-badge {
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 9999px;
+  font-weight: 600;
+}
+
+/* Custom refined scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(196, 164, 132, 0.4);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(143, 110, 77, 0.6);
+}
+
+/* Ambient mesh background */
+.bg-ambient-mesh {
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(196, 164, 132, 0.12) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(240, 234, 224, 0.6) 0px, transparent 50%),
+    radial-gradient(at 50% 50%, rgba(253, 252, 251, 0.9) 0px, transparent 70%),
+    radial-gradient(at 0% 100%, rgba(238, 232, 222, 0.4) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(196, 164, 132, 0.1) 0px, transparent 50%);
+}
+

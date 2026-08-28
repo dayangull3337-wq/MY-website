@@ -1,0 +1,7 @@
+{
+  "name": "Veloura — Luxury Sofa Atelier",
+  "description": "High-end glassmorphic sofa-only e-commerce atelier featuring sectional, curved, modular and bespoke lounges with real variation management, multi-step checkout, interactive AI Sofa Assistant, and admin control suite.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
